@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bike Showroom Management System</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box">
+      <h1 class="title">Bike Showroom Management System</h1>
+    </div>
+  </div> 
+  <div class="body">
+    <div class="content">
+      <h1 class="title1">Choose Your Desired Bike</h1>
+      <form #myForm="ngForm">
+        <label for="name">Your Name: </label>
+        <input type="text" name="name" [(ngModel)]="name" id="name" required>
+        <br><br>
+        <label for="license">Your License No: </label>
+        <input type="number" name="license" [(ngModel)]="license" id="license" required>
+        <br><br>
+        <label for="no">Your Mobile No: </label>
+        <input type="number" [(ngModel)]="no" name="no" id="no" required>
+        <br><br>
+        <label for="bikemodel">Choose Bike Model:</label>
+        <input type="text" [(ngModel)]="b_name" name="b_name" id="b_name" required>
+        <br><br>
+        <div class="button">
+          <div>
+            <button type="button" class="btn btn-success" (click)="insertbike(myForm.value)">Insert</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-primary">Update</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-danger">Delete</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-warning">Find</button>
+          </div>
+          <div>
+            <button type="button" class="btn btn-info">Find All</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- <div class="box1">
+            <p>{{vname}} <br> {{vlicense}} <br> {{vno}} <br> {{vb_name}} <br> </p>
+        </div> -->
+  </div>
+</body>
+
+</html>
